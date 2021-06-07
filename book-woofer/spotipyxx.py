@@ -6,13 +6,15 @@ import webbrowser
 import spotipy.util as util
 from spotipy.oauth2 import SpotifyClientCredentials
 from json.decoder import JSONDecodeError
-from spotify.spotify_creds import SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_USER
+from spotify.spotify_creds import SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_USER, SPOTIFY_REDIRECT_URI
+
 
 # Get the username from terminal
 cid = SPOTIFY_CLIENT_ID
 secret = SPOTIFY_CLIENT_SECRET
 username = SPOTIFY_USER
-#scope = 'user-read-private user-read-playback-state user-modify-playback-state'
+
+scope = 'user-read-private user-read-playback-state user-modify-playback-state'
 
 client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
