@@ -4,4 +4,10 @@
 .DS_Store
 #raw_data/
 **/__pycache__/
+.spotify_creds.py
+# ./.env
+
+SPOTIPY_CLIENT_ID='926ada51c024455f8534e0082426a8a8'
+SPOTIPY_CLIENT_SECRET='4aefbb5f827c4c4183f81aa2f0a53cb0'
+SPOTIPY_REDIRECT_URI='http://google.com/'
 .env
