@@ -25,11 +25,11 @@ def select_and_play(feeling):
        }
     
     mood = d[feeling]
-    
+
     return components.html(
-                f'<iframe src={mood} width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
-                height=600
-                )
+            f'<iframe src={mood} width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+            height=600
+            )
 
 # components.html(
 #     '''
