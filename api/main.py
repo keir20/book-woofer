@@ -24,4 +24,5 @@ def index():
 @app.post("/predict/")
 async def prediction(text: str):
     pred =  predict(text, model, tokenizer)
-    return {'prediction': [float(i) for i in pred]}
+    # return {'prediction': [float(i) for i in pred]}
+    return pred
