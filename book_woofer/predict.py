@@ -25,7 +25,15 @@ def predict(sentence, model, tokenizer):
     sentence_seq=tokenizer.texts_to_sequences(sentence_lst)
     sentence_padded=pad_sequences(sentence_seq,maxlen=1000,padding='post')
     ans=model.predict(sentence_padded)
-    print("The emotion predicted is",ans)
+    print(ans)
+    # ans= list(ans)
+    # print(ans)
+    labels = ['anger', 'fear', 'happy', 'love','neutral','sadness']
+    ans_dict = dict(zip(labels, ans[0]))
+    print(ans_dict)
+    print("The emotion predicted is",ans_dict)
+    return {k: float(v) for k, v in ans_dict.items()}
+
 
 if __name__=="__main__":
     model, tokenizer = load_the_model()
