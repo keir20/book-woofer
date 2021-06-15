@@ -1,6 +1,6 @@
 FROM python:3.8.6-buster
 COPY book_woofer /book_woofer
-COPY models/model3 /models/model3
+COPY models/model_acc60 /models/model_acc60
 COPY models/tokenizer.pickle /models/tokenizer.pickle
 COPY api /api
 COPY requirements.txt /requirements.txt

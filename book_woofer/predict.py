@@ -13,7 +13,7 @@ import os
 #     return model, tokenizer
 
 def load_the_model():
-    model = keras.models.load_model(os.path.join('models', 'model3'))
+    model = keras.models.load_model(os.path.join('models', 'model_acc60'))
     with open((os.path.join('models', 'tokenizer.pickle')), 'rb') as handle:
         tokenizer = pickle.load(handle)
     print ('model loaded')
